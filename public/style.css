@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image {
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative; /* Make sure the image container is relative */
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.container {
+    height: fit-content;;
+    width: 400px;
+    background-color:gray;
+    position: absolute; /* Position the container absolutely */
+    top: 50%; /* Position it in the middle of the image vertically */
+    left: 50%; /* Position it in the middle of the image horizontally */
+    transform: translate(-50%, -50%); /* Center it precisely */
+    z-index: 2; /* Make sure it's on top of the image */
+    opacity: 0.7;
+    border-radius: 30px;
+}
+#text{
+    border-radius: 20px;
+    height: 50px;
+    width: 300px;
+}
+
+.title{
+    text-align: center;
+    color: white;
+}
+
+.button-63{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border:none ;
+}
+
+input[type=text] {
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.secondUl{
+    list-style-type: none;
+}
+
+.footer{
+    position: absolute; /* Position the container absolutely */
+    top: 95%; /* Position it in the middle of the image vertically */
+    left: 50%;
+    bottom: 0%; /* Position it in the middle of the image horizontally */
+    transform: translate(-50%, -50%); /* Center it precisely */
+    z-index: 3; 
+    color: honeydew;
+}
+
+.label{
+  color: honeydew;
+  font-size: 24px; 
+}
+
+input[type="radio"] {
+    /* Increase the size */
+    width: 20px;
+    height: 20px;
+  }
+  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-GLhlTQ8i7u6p1Iqq0hjN/K1PDUSU3I5z9a4lTvC6QgPZXbrnU7h/2hRZHp5uPe3v" crossorigin="anonymous">
+<link rel="stylesheet" href="/style.css">
+<body>
+        <nav class="navbar">
+          <!-- Navigation links go here -->
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">work</a></li>
+          </ul>
+        </nav>
+
+    <img class="image" src="pic3.jpg" alt="">
+
+    <div class="container">
+        <div>
+            <h1 class="title">Work List</h1>
+            <form action="/workTask" method="POST"> <!-- Modified the form action to submit to the /addTask route -->
+                <input type="text" name="text" id="text" placeholder="New Task" required="" autocomplete="off">
+                <button type="submit" class="button-63" role="button">+</button>
+            </form>
+        </div>
+        <div class="secondDiv">
+            <ul class="secondUl">
+                <% workTasks.forEach((task, index) => { %>
+                    <li>
+                        <input class="button" type="radio" onclick="toggleStrikeThrough(this)">
+                        <label><%= task %></label>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleStrikeThrough(radioBtn) {
+            const label = radioBtn.nextElementSibling; // Get the label next to the radio button
+            if (radioBtn.checked) {
+                label.style.textDecoration = "line-through"; // Add line-through if checked
+            } else {
+                label.style.textDecoration = "none"; // Remove line-through if unchecked
+            }
+        }
+    </script>
+
+    <footer class="footer"><p>Copyright © 2024 </p> </footer>
+
+</body>
+</html>
